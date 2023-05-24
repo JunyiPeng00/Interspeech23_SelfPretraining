@@ -10,6 +10,7 @@ files = glob.glob("/mnt/proj3/open-24-5/pengjy_new/Data/Data2/Libri/LibriSpeech/
 files.sort()
 f2 = open('train.tsv','w')
 
+f2.writelines('/mnt/proj3/open-24-5/pengjy_new/Data/Data2/Libri/LibriSpeech/'+'\n')
 for fname in tqdm.tqdm(files):
     path = fname.replace("/mnt/proj3/open-24-5/pengjy_new/Data/Data2/Libri/LibriSpeech/","")
     frames = soundfile.info(str(fname)).frames
